@@ -1,0 +1,68 @@
+
+
+{{ 'https://unpkg.com/flickity@2/dist/flickity.min.css' | stylesheet_tag }}
+{{ 'carouseul-ugc.css' | stylesheet_tag }}
+{% assign section_id = "section-" | append: section.id %}
+{%- style -%}
+#{{section_id}} .main-carousel{ {% unless request.design_mode %} visibility:hidden; {% endunless %} } #{{section_id}}.ce-section__padding{padding:{{section.settings.padding_top_movil}}px {{section.settings.padding_right_movil}}px {{section.settings.padding_bottom_movil}}px {{section.settings.padding_left_movil}}px;} #{{section_id}} .ce-heading__font{font-size:{{section.settings.heading_font_size_mobile}}px!important;color:{{section.settings.heading_font_color}}!important;line-height:120%;margin-bottom:16px;} #{{section_id}} .ce-button{display:inline-block;font-size:{{section.settings.button_font_size_mobile}}px!important;background-color:{{section.settings.button_bg_color}};color:{{section.settings.button_font_color}};border-radius:{{section.settings.button_border_radius}}px;padding:15px 30px;margin-bottom:16px;} #{{section_id}} .ce-subheading__font p{font-size:{{section.settings.subheading_font_size_mobile}}px!important;color:{{section.settings.subheading_font_color}}!important;line-height:120%;margin-bottom:32px;} #{{section_id}} .ce-carousel__header{text-align:center;} #{{section_id}} .flickity-viewport{height:374px;} #{{section_id}} .flickity-slider{left:18px!important;} #{{section_id}} .main-carousel{margin:0;padding:0;list-style:none;} #{{section_id}} .carousel-cell{width:210px;height:auto;margin-left:18px;border-radius:{{section.settings.video_border_radius}}px;overflow:hidden;} .flickity-button{position:absolute;background:hsla(0,0%,0%,.75);border:none;color:white;} #{{section_id}} .flickity-button{background:hsla(0,0%,0%,.75);color:white;} #{{section_id}} .flickity-button:focus{outline:none;background-color:#000000;box-shadow:0 0 4px rgba(0,0,0,0.2);} #{{section_id}} .ce-video__item--wrapper{height:374px;} #{{section_id}} .ce-video__placeholder{position:relative;height:100%;border:1px solid lightgray;display:flex;justify-content:center;align-items:center;} #{{section_id}} .ce-video__item{max-height:100%;position:absolute;top:50%;left:49.9%;transform:translate(-50%,-50%);min-width:101%;min-height:102%;cursor:pointer;object-fit:cover;background:transparent;} #{{section_id}} .ce-video__placeholder{background-color:#F5F5F5;fill:gray;border-radius:{{section.settings.video_border_radius}}px;overflow:hidden;} #{{section_id}} .video__item--icon{background-color:white;border:1px solid lightgray;border-radius:50%;color:black;display:flex;align-items:center;justify-content:center;height:60px;width:60px;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(1);z-index:1;} #{{section_id}} .video__item--icon svg{height:24px;width:24px;}
+@media screen and (min-width:641px){#{{section_id}}.ce-section__padding{ {% if section.settings.custom_width %} padding-left:50px; {% endif %} } #{{section_id}} .ce-heading__font{font-size:{{section.settings.heading_font_size_desktop}}px!important;margin-bottom:16px;} #{{section_id}} .ce-button{font-size:{{section.settings.button_font_size_desktop}}px!important;} #{{section_id}} .ce-subheading__font p{font-size:{{section.settings.subheading_font_size_desktop}}px!important;} #{{section_id}} .flickity-slider{left:{{section.settings.padding_left_desktop}}px!important;} #{{section_id}} .flickity-viewport{height:450px;} #{{section_id}} .carousel-cell{width:254px;margin-left:22px;margin-top:0;} #{{section_id}} .ce-video__item--wrapper{height:450px;} #{{section_id}} .ce-video__item{min-height:104%;height:450px;object-fit:contain;}}
+@media(min-width:1024px){#{{section_id}}.ce-section__padding{padding:{{section.settings.padding_top_desktop}}px {{section.settings.padding_right_desktop}}px {{section.settings.padding_bottom_desktop}}px {{section.settings.padding_left_desktop}}px;} #{{section_id}}.ce-section__padding{ {% if section.settings.custom_width %} padding-left:50px; {% endif %} } #{{section_id}} .ce-inner__wrapper{ {% if section.settings.custom_width %} max-width:{{section.settings.max_width_desktop}}px;margin:0 auto; {% endif %} } #{{section_id}} .ce-subheading__font p{margin-bottom:0;} #{{section_id}} .flickity-slider{left:0!important;} #{{section_id}} .ce-carousel__header{text-align:left;} #{{section_id}} .ce-inner__wrapper{display:grid;grid-template-columns:25% 75%;} #{{section_id}} .ce-carousel__column{height:100%;} #{{section_id}} header.ce-carousel__column{display:flex;flex-direction:column; {% if section.settings.vertical_alignment=='top' %} justify-content:flex-start; {% elsif section.settings.vertical_alignment=='middle' %} justify-content:center; {% else %} justify-content:flex-end; {% endif %} }}@media(min-width:1280px){#{{section_id}}.ce-section__padding{ {% if section.settings.custom_width %} padding-left:50px; {% endif %} }}@media(min-width:1440px){#{{section_id}}.ce-section__padding{ {% if section.settings.custom_width %} padding-left:0; {% endif %} }}
+{%- endstyle -%}
+{%- capture flickity_options -%}
+{
+  "cellAlign": "left", 
+  "draggable": true, 
+  "prevNextButtons": true,
+  "pageDots": false, 
+  "freeScroll": true, 
+  "wrapAround": true,
+  "arrowShape": {"x0": 20, "x1": 60, "y1": 40, "x2": 60, "y2": 35, "x3": 25}
+}
+{%- endcapture -%}
+{%- capture video_items -%}
+  {% for block in section.blocks %}
+    <li class="carousel-cell" {{ block.shopify_attributes }}>
+      <figure class="ce-video__item--wrapper" data-src="{{ block.settings.video }}">
+        {%- if block.settings.video == blank -%}
+          <div class="ce-video__placeholder">
+            <div class="video__item--icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                focusable="false"
+                fill="none"
+                viewBox="0 0 10 14"
+              >
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.48177 0.814643C0.81532 0.448245 0 0.930414 0 1.69094V12.2081C0 12.991 0.858787 13.4702 1.52503 13.0592L10.5398 7.49813C11.1918 7.09588 11.1679 6.13985 10.4965 5.77075L1.48177 0.814643Z" fill="black"/>
+              </svg>
+            </div>
+          </div>
+        {% else %}
+          {% if request.design_mode %}
+            <video>
+              <source src={{ block.settings.video }} />
+            </video>
+          {% endif %}
+        {%- endif -%}
+      </figure>
+    </li>
+  {% endfor %}
+{%- endcapture -%}
+<section id="{{ section_id }}" class="ce-section__padding" style="background-color:{{ section.settings.bg_color }};">
+  <div class="ce-inner__wrapper">
+    <div class="video-section">
+      <header class="ce-carousel__column ce-carousel__header">
+        {%- unless section.settings.heading == blank -%}
+          <h2 class="ce-heading__font">{{ section.settings.heading }}</h2>
+        {%- endunless -%}
+      </header>
+      <div class="ce-carousel__column">
+        <ul class="main-carousel flickity-enabled is-draggable" data-flickity='{{ flickity_options }}'>
+          {{ video_items }}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<script>(function(){window.flickityLoaded=window.flickityLoaded||{},window.loadVideos=window.loadVideos||function(e){document.addEventListener("DOMContentLoaded",()=>{const t=t=>{const e=document.createElement("video");e.controls=!0,e.autoplay=!0,e.muted=!0,e.loop=!0,e.playsInline=!0,e.classList.add("ce-video__item");const n=document.createElement("source");n.src=t.getAttribute("data-src"),n.type="video/mp4",e.appendChild(n),t.appendChild(e)};document.querySelectorAll(`#${e} .ce-video__item--wrapper`).forEach(t),console.log("Videos displayed")})},window.loadFlickityScript=window.loadFlickityScript||function(){return new Promise((e,t)=>{const n=document.createElement("script");n.src="https://cdn.jsdelivr.net/npm/flickity@2/dist/flickity.pkgd.min.js",n.onload=()=>e(),n.onerror=e=>t(e),document.body.appendChild(n)})},window.initializeFlickity=window.initializeFlickity||function(e){document.querySelectorAll(".main-carousel").forEach(t=>{const e=t.closest("[id]").id;window.flickityLoaded[e]||(new Flickity(t,{cellAlign:"left",contain:!0,prevNextButtons:!0,draggable:!0,pageDots:!1,freeScroll:!0,wrapAround:!0,arrowShape:{x0:20,x1:60,y1:40,x2:60,y2:35,x3:25}}),t.style.visibility="visible",window.flickityLoaded[e]=!0)})};const e=function(e){const t=e.detail.sectionId||e.detail.blockId;initializeFlickity(t)};window.flickityEventsInitialized||(["load","unload","select","deselect","reorder"].forEach(t=>{document.documentElement.addEventListener(`shopify:section:${t}`,e)}),["select","deselect"].forEach(t=>{document.documentElement.addEventListener(`shopify:block:${t}`,e)}),window.flickityEventsInitialized=!0);const t=document.querySelectorAll(".main-carousel");t.forEach(e=>{const t=e.closest("[id]").id;loadFlickityScript().then(()=>{initializeFlickity(t)}).catch(e=>console.error("Error loading Flickity script:",e)),loadVideos(t)})})();</script>
+{%schema%}{"name":"CE | Carousel UGC v2","settings":[{"type":"color","id":"bg_color","label":"Background color","default":"#ffffff"},{"type":"checkbox","id":"custom_width","label":"Enable custom width","default":true},{"type":"range","id":"max_width_desktop","min":640,"max":1440,"step":20,"unit":"px","label":"Max width (desktop)","default":1280},{"type":"header","content":"Content (desktop)"},{"type":"select","id":"vertical_alignment","label":"Vertical alignment","options":[{"value":"top","label":"Top"},{"value":"middle","label":"Middle"},{"value":"bottom","label":"Bottom"}],"default":"top"},{"type":"header","content":"Heading"},{"type":"textarea","id":"heading","label":"Heading","default":"Heading"},{"type":"color","id":"heading_font_color","label":"Font color","default":"#000000"},{"type":"range","id":"heading_font_size_mobile","min":8,"max":100,"step":2,"unit":"px","label":"Font size (mobile)","default":14},{"type":"range","id":"heading_font_size_desktop","min":8,"max":200,"step":2,"unit":"px","label":"Font size (desktop)","default":18},{"type":"header","content":"Button"},{"type":"text","id":"button_text","label":"Button text","default":"@account"},{"type":"url","id":"button_url","label":"Button url"},{"type":"color","id":"button_bg_color","label":"Background color","default":"#000000"},{"type":"color","id":"button_font_color","label":"Font color","default":"#ffffff"},{"type":"range","id":"button_font_size_mobile","min":8,"max":100,"step":2,"unit":"px","label":"Font size (mobile)","default":14},{"type":"range","id":"button_font_size_desktop","min":8,"max":200,"step":2,"unit":"px","label":"Font size (desktop)","default":18},{"type":"range","id":"button_border_radius","min":0,"max":52,"step":4,"unit":"px","label":"Border radius","default":0},{"type":"header","content":"Subheading"},{"type":"richtext","id":"subheading","label":"Subheading","default":"<p>Subheading</p>"},{"type":"color","id":"subheading_font_color","label":"Font color","default":"#000000"},{"type":"range","id":"subheading_font_size_mobile","min":8,"max":100,"step":2,"unit":"px","label":"Font size (mobile)","default":14},{"type":"range","id":"subheading_font_size_desktop","min":8,"max":200,"step":2,"unit":"px","label":"Font size (desktop)","default":18},{"type":"header","content":"Videos"},{"type":"range","id":"video_border_radius","min":0,"max":140,"step":4,"unit":"px","label":"Border radius","default":0},{"type":"header","content":"Spacing (mobile)"},{"type":"range","id":"padding_top_movil","min":0,"max":200,"step":4,"unit":"px","label":"Padding top","default":32},{"type":"range","id":"padding_right_movil","min":0,"max":200,"step":4,"unit":"px","label":"Padding right","default":0},{"type":"range","id":"padding_bottom_movil","min":0,"max":200,"step":4,"unit":"px","label":"Padding bottom","default":32},{"type":"range","id":"padding_left_movil","min":0,"max":200,"step":4,"unit":"px","label":"Padding left","default":0},{"type":"header","content":"Spacing (desktop)"},{"type":"range","id":"padding_top_desktop","min":0,"max":320,"step":4,"unit":"px","label":"Padding Top","default":64},{"type":"range","id":"padding_right_desktop","min":0,"max":200,"step":4,"unit":"px","label":"Padding right","default":0},{"type":"range","id":"padding_bottom_desktop","min":0,"max":320,"step":4,"unit":"px","label":"Padding Bottom","default":64},{"type":"range","id":"padding_left_desktop","min":0,"max":200,"step":4,"unit":"px","label":"Padding left","default":0}],"blocks":[{"type":"video","name":"Video","settings":[{"type":"url","id":"video","label":"Video"}]}],"presets":[{"category":"Advanced","name":"CE | Carousel UGC v2","settings":{},"blocks":[{"type":"video"},{"type":"video"},{"type":"video"},{"type":"video"}]}]}{%endschema%}

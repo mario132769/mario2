@@ -1,0 +1,75 @@
+{{ 'section-video-with-text.css' | asset_url | stylesheet_tag }}
+
+<div class="video-section">
+  <div class="content-left">
+    <h1>{{ section.blocks[0].settings.Titulo }}</h1>
+    <p>{{ section.blocks[1].settings.Text }}</p>
+    <button class="boton">{{ section.blocks[3].settings.Boton }}<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg></button>
+  </div>
+  <div class="video-right">
+    <iframe src="{{ section.blocks[2].settings.videoUrl }}" frameborder="0"></iframe>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "video_with_text",
+  "blocks": [
+    {
+      "type": "title",
+      "name": "Heading",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "Titulo",
+          "label": "Video Title",
+          "default": "<h2>Título de ejemplo</h2>"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "Text",
+          "label": "Video Description",
+          "default": "<p>Descripción de ejemplo</p>"
+        }
+      ]
+    },
+    {
+      "type": "iframe",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "url",
+          "id": "videoUrl",
+          "label": "Video URL"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Boton",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "Boton",
+          "label": "Boton"
+        }
+      ]
+    }
+
+  ],
+  "presets": [
+    {
+      "name": "Video with text"
+    }
+  ]
+}
+{% endschema %}

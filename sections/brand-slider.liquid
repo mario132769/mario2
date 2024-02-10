@@ -1,0 +1,11 @@
+{% if section.settings.brands %}
+  <div class="brands-slider">
+    <div class="brands-container">
+      {% for brand in section.settings.brands %}
+        <div class="brand-item">
+          <img src="{{ brand.image | img_url: '600x' }}" alt="{{ brand.alt }}">
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}

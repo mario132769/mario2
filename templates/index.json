@@ -1,0 +1,302 @@
+{
+  "sections": {
+    "video_with_text_3mUAEf": {
+      "type": "video-with-text",
+      "blocks": {
+        "title_PGXFHp": {
+          "type": "title",
+          "settings": {
+            "Titulo": "<h1><strong>Agencia de<br\/>branding<\/strong><\/h1>"
+          }
+        },
+        "text_F3fRyR": {
+          "type": "text",
+          "settings": {
+            "Text": "<p>La <strong>marca<\/strong> es el intangible más importante de tu empresa.<\/p><p>Somos la <strong>agencia de branding<\/strong> que necesitas para construir un modelo de marca que potencie tu diferenciación en el mercado.<\/p><p>Existe una enorme oferta comercial de productos y servicios iguales y similares, por eso, si tu marca es <strong>memorable<\/strong>, se abrirá paso en este sistema de consumo tan cambiante.<\/p>"
+          }
+        },
+        "iframe_fqemLk": {
+          "type": "iframe",
+          "settings": {
+            "videoUrl": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/bb2198d0e4a646b8a068e7dc39061d9e.mp4"
+          }
+        },
+        "button_HjLNig": {
+          "type": "button",
+          "settings": {
+            "Boton": "<p><strong>Pedir CITA<\/strong><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "title_PGXFHp",
+        "text_F3fRyR",
+        "iframe_fqemLk",
+        "button_HjLNig"
+      ],
+      "custom_css": [
+        "h1 {font-size: 5.6rem;}"
+      ],
+      "settings": {
+      }
+    },
+    "rich_text_abntnx": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ycEyAC": {
+          "type": "heading",
+          "settings": {
+            "heading": "Branding Corporativo Empresas",
+            "heading_size": "h2"
+          }
+        },
+        "heading_p34DXM": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Empresa de branding<\/strong>",
+            "heading_size": "hxl"
+          }
+        }
+      },
+      "block_order": [
+        "heading_ycEyAC",
+        "heading_p34DXM"
+      ],
+      "custom_css": [
+        ".h2 {color: #007ed4;}"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    },
+    "multicolumn_TkrexM": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_r3ryer": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/consultoria-megamenu.png",
+            "image_width": "100px",
+            "image_height": "auto",
+            "title": "<strong>Consultoría de marca digital<\/strong>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "Pedir propuesta",
+            "link": ""
+          }
+        },
+        "column_qR3CRd": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Arquitectura_de_marcas.png",
+            "image_width": "100px",
+            "image_height": "auto",
+            "title": "<strong>Arquitectura de marcas<\/strong>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "Pedir propuesta",
+            "link": ""
+          }
+        },
+        "column_iDBi6e": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/comunicacion-megamenu.png",
+            "image_width": "100px",
+            "image_height": "auto",
+            "title": "<strong>Registro de Marcas<\/strong>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "Pedir propuesta",
+            "link": ""
+          }
+        },
+        "column_eQxma8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Territorios_digitales.png",
+            "image_width": "100px",
+            "image_height": "auto",
+            "title": "<strong>Territorios Digitales<\/strong>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "Pedir propuesta",
+            "link": ""
+          }
+        },
+        "column_RKmxzM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Brandmandatory.png",
+            "image_width": "100px",
+            "image_height": "auto",
+            "title": "<strong>Brandmandatory<\/strong>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "Pedir propuesta",
+            "link": ""
+          }
+        },
+        "column_i8afKU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/KPIS_de_marca.png",
+            "image_width": "100px",
+            "image_height": "auto",
+            "title": "<strong>KPIS de Marca<\/strong>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "link_label": "Pedir propuesta",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_r3ryer",
+        "column_qR3CRd",
+        "column_iDBi6e",
+        "column_eQxma8",
+        "column_RKmxzM",
+        "column_i8afKU"
+      ],
+      "custom_css": [
+        "h3 {font-size: 3.4rem;}"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multirow_xjdn9w": {
+      "type": "multirow",
+      "blocks": {
+        "row_ixqPUz": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/imagen_2024-02-06_235501838.png",
+            "caption": "",
+            "heading": "<strong>Estrategia de marca<\/strong>",
+            "text": "<p><strong>Necesitas saber<\/strong> lo que la gente dice de ti cuando no estás<br\/>presente.<\/p><p>Te ayudamos a determinar un <strong>territorio de marca<\/strong> que te haga único en el mercado y te diferencie de tu competencia.<\/p><p>Definimos tu <strong>propuesta comunicativa<\/strong> para que generes interés, coherencia y estímulos en tus clientes y potenciales clientes.<\/p>",
+            "button_label": "Pedir PRESUPUESTO",
+            "button_link": ""
+          }
+        },
+        "row_CED3kw": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/imagen_2024-02-06_235540415.png",
+            "caption": "",
+            "heading": "<strong>Focus Group<\/strong>",
+            "text": "<p><strong>Debes conocer<\/strong> lo que motiva a tus clientes a consumir.<\/p><p>Te ayudamos usando un <strong>Focus Group<\/strong>.<\/p><p>Un método de<strong> investigación<\/strong> <strong>de mercado<\/strong> sonde analizaremos junto a tu equipo toda la información relevante sobre productos, servicios y campañas de marketing que podemos poner en marcha para señalar una trayectoria coherente y exitosa.<\/p>",
+            "button_label": "Pedir PRESUPUESTO",
+            "button_link": ""
+          }
+        },
+        "row_efKHKt": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/imagen_2024-02-06_235605908.png",
+            "caption": "",
+            "heading": "<strong>KPIS de marca<\/strong>",
+            "text": "<p>El <strong>avance seguro<\/strong> precisa conocimiento.<\/p><p>Vas a disponer de las herramientas de <strong>medición y análisis<\/strong> de que debes disponer para medir la notoriedad, relevancia, diferenciación, estima, familiaridad e involucración de tu marca en el mercado.<\/p><p>También vas a conocer los datos que necesitas saber de tu <strong>competencia<\/strong> para poder decidir y dirigir como debes.<\/p>",
+            "button_label": "Pedir PRESUPUESTO",
+            "button_link": ""
+          }
+        },
+        "row_qLNKAe": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/imagen_2024-02-06_235631769.png",
+            "caption": "",
+            "heading": "<strong>Consumer Journey (el viaje de tu cliente hacia tu negocio)<\/strong>",
+            "text": "<p><strong>Descubre<\/strong> la relación que tienen tus clientes con tu marca y utilízala para ofrecerles lo que necesitan y buscan.<\/p><p>Te ayudamos a definir <strong>soluciones de comunicación<\/strong> para cada tipo de cliente según la proximidad que tengan con tu marca, productos o servicios.<\/p><p>Accede a los canales<strong> donde están tus clientes<\/strong> y ofreceles la publicidad y el contenido que están buscando.<\/p>",
+            "button_label": "Pedir PRESUPUESTO",
+            "button_link": ""
+          }
+        },
+        "row_9fYNhJ": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/imagen_2024-02-06_235654682.png",
+            "caption": "",
+            "heading": "<strong>Brandbook y aplicaciones<\/strong>",
+            "text": "<p><strong>Define <\/strong>toda la identidad de tu marca.<\/p><p>Te ayudamos a construir una representación física, visual y verbal del <strong>modelo global<\/strong> de tu negocio.<\/p><p>Establece un<strong> objetivo común<\/strong> que cree identificación instatánea.<\/p>",
+            "button_label": "Pedir PRESUPUESTO",
+            "button_link": ""
+          }
+        },
+        "row_nkwBbm": {
+          "type": "row",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/imagen_2024-02-06_235724121.png",
+            "caption": "",
+            "heading": "<strong>Arquitectura de marcas<\/strong>",
+            "text": "<p><strong>Aprende a categorizar<\/strong> de forma más eficaz tu cartera de productos.<\/p><p><strong>Te ayudamos a implementar<\/strong> la estrategia de extensión de línea, marca o multimarca que debes seguir para ser más eficiente.<\/p>",
+            "button_label": "Pedir PRESUPUESTO",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "row_ixqPUz",
+        "row_CED3kw",
+        "row_efKHKt",
+        "row_qLNKAe",
+        "row_9fYNhJ",
+        "row_nkwBbm"
+      ],
+      "settings": {
+        "image_height": "medium",
+        "desktop_image_width": "medium",
+        "heading_size": "h1",
+        "text_style": "body",
+        "button_style": "secondary",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "image_layout": "alternate-left",
+        "section_color_scheme": "",
+        "row_color_scheme": "",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_6JbTiq": {
+      "type": "image-banner",
+      "custom_css": [
+        "img {width: 300px; height: 244px;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/google-review-logo-01-1024x834-3-768x626.png",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    }
+  },
+  "order": [
+    "video_with_text_3mUAEf",
+    "rich_text_abntnx",
+    "multicolumn_TkrexM",
+    "multirow_xjdn9w",
+    "image_banner_6JbTiq"
+  ]
+}
