@@ -281,7 +281,7 @@
         "image": "shopify:\/\/shop_images\/google-review-logo-01-1024x834-3-768x626.png",
         "image_overlay_opacity": 0,
         "image_height": "small",
-        "desktop_content_position": "middle-center",
+        "desktop_content_position": "middle-right",
         "show_text_box": true,
         "desktop_content_alignment": "center",
         "color_scheme": "background-1",
