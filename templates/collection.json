@@ -30,6 +30,17 @@
     },
     "prueba": {
       "type": "archivo-prueba",
+      "blocks": {
+        "title_dgaRHD": {
+          "type": "title",
+          "settings": {
+            "Titulo": "<h2>hey<\/h2>"
+          }
+        }
+      },
+      "block_order": [
+        "title_dgaRHD"
+      ],
       "settings": {
         "padding_top": 48
       }
