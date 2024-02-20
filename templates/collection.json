@@ -31,7 +31,7 @@
     "prueba": {
       "type": "archivo-prueba",
       "settings": {
-        "padding_top": 72
+        "padding_top": 48
       }
     }
   },
