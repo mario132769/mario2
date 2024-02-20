@@ -3,7 +3,7 @@
 </div>
 {% for block in section.blocks %}
 {{ block.settings.Titulo }}
-{{ block.settings.image_with_text_image }}
+{{ block.settings.imagen }}
 {% endfor %}
 
 {{ settings.badge_position }}
@@ -41,13 +41,11 @@
         "name": "imagen",
         "settings": [
         {
-  "type": "image_picker",
-  "id": "image_with_text_image",
-  "label": "Image"
-}
-
+          "type": "image_picker",
+          "id": "imagen",
+          "label": "Image"
+        }
         ]
-          
         }
       
       ],
