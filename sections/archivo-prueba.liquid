@@ -1,7 +1,10 @@
 <div style="padding-top: {{ section.settings.padding_top }}px;">
   prueba
 </div>
-{{ section.blocks[0].settings.Titulo }}
+{% for block in section.blocks %}
+{{ block.settings.Titulo }}
+{% endfor %}
+
 {{ settings.badge_position }}
 {% schema %}
   {
