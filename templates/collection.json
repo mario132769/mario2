@@ -32,29 +32,11 @@
       "type": "archivo-prueba",
       "settings": {
       }
-    },
-    "featured_blog_cw3U8H": {
-      "type": "featured-blog",
-      "settings": {
-        "heading": "papaya",
-        "heading_size": "h1",
-        "blog": "",
-        "post_limit": 3,
-        "columns_desktop": 3,
-        "color_scheme": "",
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "show_view_all": true,
-        "padding_top": 40,
-        "padding_bottom": 36
-      }
     }
   },
   "order": [
     "banner",
     "product-grid",
-    "prueba",
-    "featured_blog_cw3U8H"
+    "prueba"
   ]
 }
