@@ -1,11 +1,11 @@
 <div style="padding-top: {{ section.settings.padding_top }}px;">
-  prueba
+  {{ 'general.mario' | t }}prueba
 </div>
 {% for block in section.blocks %}
 {{ block.settings.Titulo }}
 {{ block.settings.imagen }}
 {% endfor %}
-{{ 'general.mario' | t }}
+
 {{ settings.badge_position }}
 {% schema %}
   {
