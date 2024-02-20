@@ -36,10 +36,17 @@
           "settings": {
             "Titulo": "<h2>hey<\/h2>"
           }
+        },
+        "imagen_DcwNLn": {
+          "type": "imagen",
+          "settings": {
+            "image_with_text_image": "shopify:\/\/shop_images\/ajax-loader.gif"
+          }
         }
       },
       "block_order": [
-        "title_dgaRHD"
+        "title_dgaRHD",
+        "imagen_DcwNLn"
       ],
       "settings": {
         "padding_top": 48
