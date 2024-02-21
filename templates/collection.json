@@ -37,16 +37,15 @@
             "Titulo": "<h2>hey<\/h2>"
           }
         },
-        "imagen_DcwNLn": {
-          "type": "imagen",
+        "toni_AJx6Ga": {
+          "type": "toni",
           "settings": {
-            "image_with_text_image": "shopify:\/\/shop_images\/marketing_influencia.png"
           }
         }
       },
       "block_order": [
         "title_dgaRHD",
-        "imagen_DcwNLn"
+        "toni_AJx6Ga"
       ],
       "settings": {
         "padding_top": 48
