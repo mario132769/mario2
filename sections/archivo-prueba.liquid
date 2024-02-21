@@ -4,6 +4,7 @@ prueba
 {% for block in section.blocks %}
 {{ block.settings.Titulo }}
 {{ block.settings.imagen }}
+{{ block.settings.textarea }}
 {% endfor %}
 {{ 'general.mario_html' | t }}
 {{ settings.badge_position }}
@@ -45,6 +46,19 @@ prueba
           "id": "imagen",
           "label": "Image"
         }
+        ]
+        },
+      {
+       "type": "textarea",
+        "name": "Text Area",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "textarea",
+            "label": "Escribe algo",
+            "default": "Bienvenido"
+          }
+          
         ]
         }
       
