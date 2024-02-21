@@ -1,0 +1,75 @@
+<div style="padding-top: {{ section.settings.padding_top }}px;">
+prueba
+</div>
+{% for block in section.blocks %}
+{{ block.settings.Titulo }}
+{{ block.settings.imagen }}
+{{ block.settings.textarea }}
+{% endfor %}
+{{ 'general.mario_html' | t }}
+{{ settings.badge_position }}
+{% schema %}
+  {
+    "name": "prueba",
+    "settings": [
+      {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    }
+    ],
+    "blocks": [
+      {
+       "type": "title",
+        "name": "Heading",
+        "settings": [
+        {
+          "type": "richtext",
+          "id": "Titulo",
+          "label": "Video Title",
+          "default": "<h2>Título de ejemplo</h2>"
+        }
+        ]
+          
+        },
+      {
+       "type": "toni",
+        "name": "imagen",
+        "settings": [
+        {
+          "type": "image_picker",
+          "id": "imagen",
+          "label": "Image"
+        }
+        ]
+        },
+      {
+       "type": "textarea",
+        "name": "Text Area",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "textarea",
+            "label": "Escribe algo",
+            "default": "Bienvenido"
+          }
+          
+        ]
+        }
+      
+      ],
+      
+     
+    
+    "presets": [
+    {
+      "name": "prueba"
+    }
+  ]
+  }
+{% endschema %}
